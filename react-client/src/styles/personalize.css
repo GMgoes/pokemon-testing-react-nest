@@ -1,0 +1,58 @@
+.grass {
+  background-color: #06d6a0;
+}
+.fire {
+  background-color: #ef476f;
+}
+.water {
+  background-color: #118ab2;
+}
+.bug {
+  background-color: #ffd166;
+}
+.normal {
+  background-color: #ffddd2;
+}
+.ground {
+  background-color: #8a5a44;
+}
+.electric {
+  background-color: #ff9f1c;
+}
+.poison {
+  background-color: #deaaff;
+}
+.fairy {
+  background-color: #ffcbf2;
+}
+.fighting {
+  background-color: #d6ccc2;
+}
+.psychic {
+  background-color: #656d4a;
+}
+.rock {
+  background-color: #a3a380;
+}
+.ghost {
+  background-color: #8093f1;
+}
+.name {
+  text-transform: capitalize;
+}
+Modal::content {
+  background-color: rebeccapurple;
+}
+#divMoves::-webkit-scrollbar {
+  width: 16px;
+}
+
+#divMoves::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+#divMoves::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 100px;
+}
