@@ -5,7 +5,7 @@ import axios from 'axios';
 export class AppService {
   async listMany() {
     const results = await axios.get(
-      'https://pokeapi.co/api/v2/pokemon?limit=100&offset=0',
+      'https://pokeapi.co/api/v2/pokemon?limit=16&offset=0',
     );
     return JSON.stringify(results.data);
   }

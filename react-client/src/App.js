@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CardPokemon from "./components/Card";
+import Logo from "./styles/Pokas.jpg";
 import "./styles/personalize.css";
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
 
   return (
     <div className="container">
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img src={Logo} alt="Logo da aplicação"></img>
+      </div>
       <div
         style={{
           display: "flex",
