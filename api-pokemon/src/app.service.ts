@@ -7,11 +7,11 @@ export class AppService {
     const results = await axios.get(
       'https://pokeapi.co/api/v2/pokemon?limit=16&offset=0',
     );
-    return JSON.stringify(results.data);
+    return results.data;
   }
 
   async listOne(name: string) {
     const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    return JSON.stringify(result.data);
+    return result.data;
   }
 }

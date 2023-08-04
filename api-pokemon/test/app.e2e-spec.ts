@@ -15,10 +15,13 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+  it('/pokemons (GET)', async () => {
+    const result = await request(app.getHttpServer()).get('/pokemons');
+    expect(JSON.parse(result.text)).toHaveProperty('results');
+  });
+
+  it('/pokemons/1 (GET)', async () => {
+    const result = await request(app.getHttpServer()).get('/pokemons/1');
+    expect(JSON.parse(result.text)).toHaveProperty('id');
   });
 });
