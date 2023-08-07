@@ -4,14 +4,17 @@ import axios from 'axios';
 @Injectable()
 export class AppService {
   async listMany() {
-    const results = await axios.get(
+    return await axios.get(
       'https://pokeapi.co/api/v2/pokemon?limit=16&offset=0',
     );
-    return results.data;
   }
 
   async listOne(name: string) {
-    const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    return result.data;
+    return await axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then((response) => response)
+      .catch(() => {
+        //console.error(error.message);
+      });
   }
 }
