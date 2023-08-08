@@ -13,7 +13,8 @@ describe('NotFoundInterceptor tests', () => {
       providers: [NotFoundInterceptor],
     }).compile();
 
-    interceptor = moduleRef.get<NotFoundInterceptor>(NotFoundInterceptor);
+    interceptor = await moduleRef.resolve(NotFoundInterceptor);
+    //interceptor = moduleRef.get<NotFoundInterceptor>(NotFoundInterceptor);
   });
 
   it('should be defined', () => {
